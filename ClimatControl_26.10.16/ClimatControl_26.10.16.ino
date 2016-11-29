@@ -96,7 +96,7 @@ void light_Level() {
       digitalWrite(LedG, LOW);
       digitalWrite(LedB, LOW);
     }
-    Serial.print("Current light level: ");                 //Выводим надпись в консоль, а затем строкой ниже выводим значение сопротивления фототранзистора
+    Serial.print("Current Resist value: ");                 //Выводим надпись в консоль, а затем строкой ниже выводим значение сопротивления фототранзистора
     Serial.println(GetVatueResit());                        //Вывод полученного значения в консоль
 
     lcd.setCursor(7,1);                                   //Устанавливаем курсор на дисплее. Вторая строка, 8 позиция в этой строке
