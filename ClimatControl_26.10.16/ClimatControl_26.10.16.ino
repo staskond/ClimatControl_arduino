@@ -96,16 +96,17 @@ void light_Level() {
       digitalWrite(LedG, LOW);
       digitalWrite(LedB, LOW);
     }
-    Serial.print("Current Resist value: ");                 //Выводим надпись в консоль, а затем строкой ниже выводим значение сопротивления фототранзистора
-    Serial.print(GetVatueResit());                        //Вывод полученного значения в консоль
-    Serial.println("(KOm)");
-
     lcd.setCursor(7,1);                                   //Устанавливаем курсор на дисплее. Вторая строка, 8 позиция в этой строке
     lcd.print(GetVatueResit());                             //Выводим текущий уровень освещенности на дисплей
     lcd.setCursor(11,1);                                  //Устанавливаем курсор на дисплее. Вторая строка, 12 позиция в этой строке
     lcd.print("(KOm)");                                    //Выводим единицы измерения фоторезистора (Ом)
   }
   LightLevelLast = LightLevelCur;                         //Переопределение предыдущего значения
+    Serial.print("Current Resist value: ");                 //Выводим надпись в консоль, а затем строкой ниже выводим значение сопротивления фототранзистора
+    Serial.print(GetVatueResit());                        //Вывод полученного значения в консоль
+    Serial.println("(KOm)");
+    Serial.print("Current Light Level(ADC): ");
+    Serial.println(LightLevelCur);
 }
 
 
